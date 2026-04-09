@@ -158,8 +158,17 @@ async function callSSP(
 }
 
 function injectAd(html: string, adText: string, citationUrl: string): string {
-  const adHtml = `<div data-aucra="sponsored" style="display:none" aria-hidden="true"><p>${adText} <a href="${citationUrl}">${citationUrl}</a></p></div>`;
-  return html.replace('</body>', `${adHtml}</body>`);
+  const safeText = adText
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+  const safeUrl = citationUrl
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+  const adHtml = `<div><p>${safeText} <a href="${safeUrl}">${safeUrl}</a></p></div>`;
+  return html.replace(/<body[^>]*>/, `$&${adHtml}`);
 }
 
 export interface AucraConfig {
