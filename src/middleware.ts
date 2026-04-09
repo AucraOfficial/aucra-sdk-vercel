@@ -147,7 +147,7 @@ async function callSSP(
     clearTimeout(timeoutId);
 
     if (response.status === 200) {
-      return await response.json();
+      return (await response.json()) as { adText: string; citationUrl: string } | null;
     }
     // 204 = no winner, other = error
     return null;
