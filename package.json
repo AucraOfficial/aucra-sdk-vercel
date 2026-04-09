@@ -1,0 +1,23 @@
+{
+  "name": "@aucra/vercel",
+  "version": "0.1.0",
+  "description": "Aucra edge injection for any framework on Vercel via Routing Middleware",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AucraOfficial/aucra-sdk-vercel.git"
+  },
+  "files": [
+    "src"
+  ],
+  "main": "./src/middleware.js",
+  "types": "./src/middleware.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "check": "tsc --noEmit"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "typescript": "^5.0.0"
+  }
+}
