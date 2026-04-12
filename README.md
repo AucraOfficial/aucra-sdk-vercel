@@ -120,14 +120,14 @@ The SDK prints detailed runtime traces. Open Vercel Dashboard → **Logs** to wa
 
 ## Developer Notes
 
-This package is framework-agnostic TypeScript. To build:
+This package is framework-agnostic TypeScript. To build before publishing:
 
 ```bash
 npm install
-npm run build
+npm run build   # compiles TS → dist/
 ```
 
-The source is in `src/middleware.ts` - no compilation required for direct use with Vercel.
+The source is in `src/middleware.ts`, output is in `dist/`.
 
 ## Publishing
 

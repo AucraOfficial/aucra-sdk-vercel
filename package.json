@@ -7,10 +7,11 @@
     "url": "git+https://github.com/AucraOfficial/aucra-sdk-vercel.git"
   },
   "files": [
-    "src"
+    "src",
+    "dist"
   ],
-  "main": "./src/middleware.js",
-  "types": "./src/middleware.d.ts",
+  "main": "./dist/middleware.js",
+  "types": "./dist/middleware.d.ts",
   "scripts": {
     "build": "tsc",
     "check": "tsc --noEmit"
