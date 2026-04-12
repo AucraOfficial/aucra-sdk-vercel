@@ -1,6 +1,6 @@
 {
   "name": "@aucra/vercel",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Aucra edge injection for any framework on Vercel via Routing Middleware",
   "repository": {
     "type": "git",
